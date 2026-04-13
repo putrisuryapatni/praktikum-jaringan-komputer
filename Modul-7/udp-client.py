@@ -11,6 +11,10 @@ while running:
     message = input("> ")
 
     if message.lower() == "exit":
+        clientSocket.sendto(
+            message.encode(),
+            (serverName, serverPort)
+        )
         print("[SYSTEM] Keluar dari program")
         running == False
         continue
@@ -26,7 +30,7 @@ while running:
     # 2048 itu panjang byte nya
     modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
 
-    print("[SYStem] Pesan telah diterima dari: ", serverAddress)
+    print("[SYSTEM] Pesan telah diterima dari: ", serverAddress)
     print(modifiedMessage.decode())
 
 #menutup socket dari client

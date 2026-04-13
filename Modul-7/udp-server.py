@@ -25,7 +25,7 @@ while running:
 
     # capslock
     modifiedMessage = decodedMessage.upper()
-    print("[SERVER] Diterima dari ", clientAddress, "message: ",)
+    print("[SERVER] Diterima dari ", clientAddress, "message: ", decodedMessage)
 
     # mengirim ke client
     serverSocket.sendto(
