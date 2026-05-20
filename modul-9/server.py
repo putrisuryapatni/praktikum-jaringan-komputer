@@ -2,7 +2,7 @@ from socket import *
 import sys
 
 serverSocket = socket(AF_INET, SOCK_STREAM)
-serverSocket.bind((" ", 6789))
+serverSocket.bind((' ', 6789))
 serverSocket.listen(1)
 
 print("Server jalan di http://127.0.0.1:6789")
